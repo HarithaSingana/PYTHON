@@ -1,0 +1,15 @@
+stu=[
+    {"name":"Jenni","dept":"cse","marks":[98,90,95]},
+    {"name":"Abhi","dept":"cse","marks":[99,91,95]},
+    {"name":"Arshu","dept":"ece","marks":[94,90,95]},
+    {"name":"Ravi","dept":"cse","marks":[90,90,90]},
+    {"name":"Pavi","dept":"cse","marks":[95,90,95]}
+]
+for i in stu:
+    total=sum(i["marks"])
+    d=total//3
+    i["per"]=d
+res=sorted(stu,key=lambda x:x["per"],reverse="True")
+des=["First","Second","Three","Fourth","Fifth"]
+for i in range(5):
+    print("Rank {} : Mr/Ms {} has scored {} stands {}".format(i+1,res[i]["name"],res[i]["per"],des[i]))
